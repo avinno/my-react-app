@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 
-function Student (props) {
+function Student(props) {
     return(
         <div className="p-4 border border-gray-500">
             <svg className="mb-1" xmlns="http://www.w3.org/2000/svg"

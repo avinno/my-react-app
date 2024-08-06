@@ -1,6 +1,6 @@
 import profilePic from './assets/avatar.jpg';
 
-function Card () {
+function Card() {
     return(
         <div className="bg-gray-100 border-gray-300 border rounded my-8 flex flex-col justify-center items-center">
             <img src={profilePic} alt="Profile picture" className="mt-4 rounded border-gray-300 border"/>

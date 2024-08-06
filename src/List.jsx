@@ -1,20 +1,18 @@
-function List() {
-    const fruits = [{id: 1, name: "apple", calories: 95},
-                                               {id: 2, name: "orange", calories: 45},
-                                               {id: 3, name: "banana", calories: 105},
-                                               {id: 4, name: "pineapple", calories: 150}];
-
+function List(props) {
     // fruits.sort((a, b) => a.name.localCompare(b.name)); // Alphabetical
     // fruits.sort((a, b) => b.name.localCompare(a.name)); // Reverse Alphabetical
     // fruits.sort((a, b) => a.calories - b.calories); // Numeric Order
-    // fruits.sort((a, b) => b.calories - a.calories); // Reverse Numberic or Descending
+    // fruits.sort((a, b) => b.calories - a.calories); // Reverse Numeric or Descending
 
     // const lowCalFruits = fruits.filter(fruit => fruit.calories < 100);
     // const highCalFruits = fruits.filter(fruit => fruit.calories >= 100);
 
-    const listItems = fruits.map(fruit => <li key={fruit.id}>{fruit.name}: &nbsp; {fruit.calories} cal</li>);
+    const category = props.category;
+    const itemList = props.items;
 
-    return(<ul>{listItems}</ul>);
+    const listItems = itemList.map(item => <li key={item.id}>{item.name[0].toUpperCase() + item.name.slice(1)}: &nbsp; <span className="italic text-gray-500">{item.calories} cal</span></li>);
+
+    return(<div className="my-4"><h3 className="font-bold text-lg">{category}</h3><ul>{listItems}</ul></div>);
 }
 
 export default List;
