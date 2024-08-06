@@ -11,6 +11,7 @@ function App() {
                 <Header />
                 <Student firstName="Aaron" lastName="Varga" age={34} isStudent={true} />
                 <Student firstName="John" lastName="Doe" age={24} isStudent={false} />
+                <Student />
                 <Card />
                 <Food />
                 <Footer />
