@@ -3,7 +3,7 @@ import profilePic from './assets/avatar.jpg';
 function Card() {
     return(
         <div className="bg-gray-100 border-gray-300 border rounded my-4 flex flex-col justify-center items-center shadow p-12 py-16">
-            <img src={profilePic} alt="Profile picture" className="rounded-full border-gray-300 border w-1/3"/>
+            <img src={profilePic} alt="Profile picture" className="rounded-full border-gray-300 border" width={125} height={125} />
             <h2 className="font-bold text-lg p-4 pb-2 text-gray-700">AV Web Design & Development</h2>
             <p className="p-2 pt-0 text-gray-900 text-center w-3/4">Professional web design & development solutions.</p>
             <a href="" className="text-blue-500 underline flex flex-row items-center gap-2 hover:no-underline">www.domain.com
