@@ -12,12 +12,18 @@ function App() {
         {id: 3, name: "banana", calories: 105},
         {id: 4, name: "pineapple", calories: 150}];
 
+    const vegetables = [{id: 6, name: "corn", calories: 63},
+        {id: 7, name: "potatoes", calories: 110},
+        {id: 8, name: "celery", calories: 15},
+        {id: 9, name: "carrots", calories: 25}];
+
     return (
         <>
             <div className="max-w-md m-auto">
                 <Header />
                 <UserGreeting isLoggedIn={true} username="Apvarga" />
-                <List items={fruits} category="Fruits" />
+                {fruits.length > 0 && <List items={fruits} category="Fruits" />}
+                {vegetables.length > 0 && <List items={vegetables} category="Vegetables" />}
                 <Student firstName="Aaron" lastName="Varga" age={34} isStudent={true} />
                 <Student firstName="John" lastName="Doe" age={24} isStudent={false} />
                 <Student />
