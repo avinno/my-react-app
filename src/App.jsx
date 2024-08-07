@@ -24,9 +24,11 @@ function App() {
                 <UserGreeting isLoggedIn={true} username="Apvarga" />
                 {fruits.length > 0 && <List items={fruits} category="Fruits" />}
                 {vegetables.length > 0 && <List items={vegetables} category="Vegetables" />}
-                <Student firstName="Aaron" lastName="Varga" age={34} isStudent={true} />
-                <Student firstName="John" lastName="Doe" age={24} isStudent={false} />
-                <Student />
+                <div className="flex flex-col gap-2">
+                    <Student firstName="Aaron" lastName="Varga" age={34} isStudent={true} />
+                    <Student firstName="John" lastName="Doe" age={24} isStudent={false} />
+                    <Student />
+                </div>
                 <Card />
                 <Food />
                 <Footer />
@@ -35,4 +37,4 @@ function App() {
     );
 }
 
-export default App
+export default App;
